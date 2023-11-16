@@ -89,7 +89,7 @@ const STYLE_POSTFIX = `
 
 const app = express()
 
-app.get('/presentation/:presentationName/slides/:slideNo', async (req, res, next) => {
+app.get('/presentations/:presentationName/slides/:slideNo', async (req, res, next) => {
   const { presentationName, slideNo } = req.params
   const path = `${ASSET_FOLDER}/${presentationName}.md`
   if (fs.existsSync(path)) {
