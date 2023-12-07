@@ -51,7 +51,7 @@ try {
 		raw: true
 	})
 
-	// // where (salary > 100 and salary < 3000) or age between 20,25
+	// // // // where (salary > 100 and salary < 3000) or age between 20,25
 	people = await Person.findAll({ 
 		where: {
 			[Op.or]: [{
@@ -64,7 +64,6 @@ try {
 					[Op.between]: [20, 25]
 				}
 			}]
-			
 		},
 		raw: true
 	})

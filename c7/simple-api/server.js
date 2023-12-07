@@ -73,6 +73,8 @@ app.get('/books', async (req, res, next) => {
 app.post('/books', async (req, res, next) => {
 	try {
 		const book = req.body
+		// const addedBook = new Book(book)
+		// await addedBook.save()
 		const createdBook = await Book.create(book)
 		res.status(201).json(createdBook)
 	} catch (err) {
